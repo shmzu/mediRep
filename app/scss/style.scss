@@ -1,0 +1,70 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.logo,
+.phone__link--header {
+    transition: box-shadow 0.2s linear;
+    
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($green-500, 0.5);
+    }
+}
+
+.poor-vision {
+    display: block;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 13px 15px 11px 51px;
+    background-color: $green-900;
+    position: relative;
+    transition: box-shadow 0.2s linear, background-color 0.2s linear, color 0.2s linear;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 18px;
+        width: 26px;
+        height: 24px;
+        background-image: url('../../images/icons/eye-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($green-500, 0.5);
+    }
+
+    &:hover {
+        background-color: $green-500;
+    }
+
+    &:active {
+        color: rgba($white, 0.7);
+    }
+}
+
+.btn-modal {
+    display: block;
+    background-color: $white;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 1.2;
+    transition: box-shadow 0.2s linear, background-color 0.2s linear;
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($green-900, 0.9);
+    }
+
+    &:hover {
+        background-color: rgba($white, 0.8)
+    }
+}
+
+@import 'blocks/header';
+@import 'blocks/social';
+@import 'media';
